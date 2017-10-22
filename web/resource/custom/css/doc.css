@@ -1,0 +1,23 @@
+
+.ly-orangebar {
+    border-top:2px solid #fa7d3c;
+}
+
+/*元素高度为100%*/
+@media (min-width:768px) {
+    .ly-sidebar {
+        -ms-flex-order: 0;
+        order: 0;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        border-right: 1px solid rgba(0,0,0,.1);
+    }
+    @supports ((position:-webkit-sticky) or (position:sticky)) {
+        .ly-sidebar{position: -webkit-sticky;
+            position: sticky;
+            top: 0rem;
+            z-index: 1000;
+            max-height: calc(100vh - 2rem);
+            overflow-y:auto;
+        }
+    }
+}
