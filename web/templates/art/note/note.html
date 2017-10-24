@@ -15,21 +15,24 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 col-xl-2 ly-sidebar ly-sidebar-color">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">返回首页</button>
 
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <span class="step size-16">
+            <div style="padding:0.5rem 1.3rem;color:white;cursor:pointer;font-size: 11px;" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <span class="step size-12">
                   <i class="icon ion-plus-round"></i>
                 </span>
-                Link with href
-            </a>
+                新建文集
+            </div>
 
-
-
-
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            <div class="collapse" id="collapseExample" >
+                <div class="card card-body" style="background-color: #3f3f3f;border:none;">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">取消</button>
+                    </form>
                 </div>
             </div>
             <nav class="nav flex-column">
