@@ -22,32 +22,30 @@
             top: 0rem;
             z-index: 1000;
             max-height: calc(100vh);
+            overflow:hidden;
             overflow-y:auto;
         }
     }
 }
 
-.ly-nav-link {
+.ly-nav-item{
     display: block;
-    padding: 0.4rem 1.5rem;
-    color:white;
+    border-left: 3px solid #3f3f3f;
+    cursor: pointer;
 }
-
-.ly-nav-link:focus, .ly-nav-link:hover {
-    padding: 0.4rem 1.3rem;
-    background-color:#646464;
-    border-left: 3px solid #ec7259;
+.ly-nav-item a {
     color:white;
     text-shadow:0 -1px 0 rgba(0,0,0,0.2);
+    padding-right: 2.5rem;
+}
+.ly-nav-item:focus, .ly-nav-item:hover {
+    background-color:#646464;
+    border-left: 3px solid #ec7259;
 }
 .ly-nav-active {
-    padding: 0.4rem 1.3rem;
     background-color:#646464;
     border-left: 3px solid #ec7259;
-    color:white;
-    text-shadow:0 -1px 0 rgba(0,0,0,0.2);
 }
-
 
 .ly-nav2-link {
     display: block;
