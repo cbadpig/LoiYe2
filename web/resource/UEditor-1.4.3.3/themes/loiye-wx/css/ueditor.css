@@ -118,7 +118,7 @@ div.edui-box {
     cursor: default;
     -webkit-user-select: none;
     -moz-user-select: none;
-    padding: 1px;
+    padding: 0px;
     overflow: hidden; /*全屏下单独一行不占位*/
     zoom: 1;
     width:auto;
@@ -129,11 +129,11 @@ div.edui-box {
 .edui-loiye-wx .edui-toolbar .edui-splitbutton,
 .edui-loiye-wx .edui-toolbar .edui-menubutton,
 .edui-loiye-wx .edui-toolbar .edui-combox {
-    margin: 1px;
+    height:40px;
 }
 /*UI工具栏、编辑区域、底部*/
 .edui-loiye-wx .edui-editor {
-    border: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d9d9d9;
     background-color: white;
     position: relative;
     overflow: visible;
@@ -144,31 +144,34 @@ div.edui-box {
 }
 /*工具栏阴影*/
 .edui-loiye-wx .edui-editor-toolbarbox {
-    position: relative;
+   /* position: relative;
     zoom: 1;
     -webkit-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
     -moz-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
     box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
     border-top-left-radius:2px;
-    border-top-right-radius:2px;
+    border-top-right-radius:2px;*/
+    height:40px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: #dedede;
 }
 
 .edui-loiye-wx .edui-editor-toolbarboxouter {
-    border-bottom: 1px solid #d4d4d4;
-    background-color: #FFFFFF;
+
     /*border: 1px solid #d4d4d4;*/
-    -webkit-border-radius: 4px 4px 0 0;
+   /* -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
     *zoom: 1;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
 }
 
 .edui-loiye-wx .edui-editor-toolbarboxinner {
-    padding-top: 4px;
+    /*padding-top: 4px;*/
 }
 
 .edui-loiye-wx .edui-editor-iframeholder {
@@ -468,40 +471,38 @@ div.edui-box {
 .edui-loiye-wx .edui-toolbar .edui-button .edui-icon,
 .edui-loiye-wx .edui-toolbar .edui-menubutton .edui-icon,
 .edui-loiye-wx .edui-toolbar .edui-splitbutton .edui-icon {
-    height: 20px !important;
-    width: 20px !important;
-    background-image: url(../images/icons.png);
-    background-image: url(../images/icons.gif) \9;
+    height: 38px !important;
+    width: 38px !important;
+   /* background-image: url(../images/icons.png);
+    background-image: url(../images/icons.gif) \9;*/
 }
 
 .edui-loiye-wx .edui-toolbar .edui-button .edui-button-wrap {
-    padding: 1px;
     position: relative;
+    height:38px;
+    width:38px;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
-    padding: 0;
-    border: 1px solid #cccccc;
+    background-color: #9f9f9f;
+    cursor:pointer;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
-    padding: 0;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    background-color: #9f9f9f;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
-    background-color: #ffffff;
-    padding: 0;
-    border: 1px solid #cccccc;
+
+    height:38px;
+    width:38px;
+    background-color: #7b7b7b;
 }
 .edui-loiye-wx .edui-toolbar .edui-state-disabled .edui-label {
     color: #ccc;
 }
 .edui-loiye-wx .edui-toolbar .edui-state-disabled .edui-icon {
-    opacity: 0.3;
+    opacity: 1;
     filter: alpha(opacity = 30);
 }
 
@@ -515,7 +516,8 @@ div.edui-box {
 }
 
 .edui-loiye-wx  .edui-for-bold .edui-icon {
-    background-position: 0 -186px;
+    /*background-position: 0 -186px;*/
+    background: url(../images/bold-2x.png) no-repeat;
 }
 
 .edui-loiye-wx  .edui-for-italic .edui-icon {
@@ -1720,11 +1722,10 @@ div.edui-box {
 }
 /*分隔线*/
 .edui-loiye-wx .edui-toolbar .edui-separator {
-    width: 1px;
-    height: 20px;
-    background-color: #e7e7eb;
-    margin: 4px 2px;
-
+    /*width: 1px;*/
+    /*height: 20px;*/
+    /*background-color: #e7e7eb;*/
+    /*margin: 4px 2px;*/
 }
 
 /*颜色按钮 */
