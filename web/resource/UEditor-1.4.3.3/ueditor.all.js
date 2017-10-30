@@ -13175,20 +13175,22 @@ UE.plugins['insertcode'] = function() {
             me.document)
     });
     me.setOpt('insertcode',{
+            'java':'Java',
+            'jfx':'JavaFx',
+            'sql':'Sql',
+            'html':'Html',
+            'css':'Css',
+            'js':'Javascript',
+            'xml':'Xml',
             'as3':'ActionScript3',
             'bash':'Bash/Shell',
             'cpp':'C/C++',
-            'css':'Css',
             'cf':'CodeFunction',
             'c#':'C#',
             'delphi':'Delphi',
             'diff':'Diff',
             'erlang':'Erlang',
             'groovy':'Groovy',
-            'html':'Html',
-            'java':'Java',
-            'jfx':'JavaFx',
-            'js':'Javascript',
             'pl':'Perl',
             'php':'Php',
             'plain':'Plain Text',
@@ -13196,9 +13198,7 @@ UE.plugins['insertcode'] = function() {
             'python':'Python',
             'ruby':'Ruby',
             'scala':'Scala',
-            'sql':'Sql',
-            'vb':'Vb',
-            'xml':'Xml'
+            'vb':'Vb'
     });
 
     /**
