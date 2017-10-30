@@ -34,13 +34,9 @@
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
-            'fullscreen', 'undo', 'redo', '|','fontsize', '|','insertcode',
-            'bold', 'italic', 'underline','forecolor', 'backcolor', '|',
-			'removeformat', 'formatmatch', '|',
-			'blockquote', 'horizontal','|',  'insertorderedlist', 'insertunorderedlist', '|',
-            'indent','rowspacingbottom', 'rowspacingtop','lineheight', '|',
-            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|',
-            'link', 'unlink','|','insertimage', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+            'fullscreen', 'undo', 'redo', '|',
+            'bold', 'italic', 'underline','blockquote', 'horizontal','|',
+            'insertimage','link', 'unlink','|','insertcode',
         ]]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
         //,labelMap:{
@@ -85,8 +81,8 @@
         //首行缩进距离,默认是2em
         //,indentValue:'2em'
 
-        //,initialFrameWidth:1000  //初始化编辑器宽度,默认1000
-        //,initialFrameHeight:320  //初始化编辑器高度,默认320
+        ,initialFrameWidth:'100%'  //初始化编辑器宽度,默认1000
+        ,initialFrameHeight:600  //初始化编辑器高度,默认320
 
         //,readonly : false //编辑器初始化结束后,编辑区域是否是只读的，默认是false
 
