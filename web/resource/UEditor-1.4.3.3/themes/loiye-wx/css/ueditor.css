@@ -338,7 +338,7 @@ div.edui-box {
 }
 
 .edui-loiye-wx .edui-for-paragraph .edui-listitem-label {
-    min-width: 200px;
+    min-width: 60px;
     _width: 200px;
     padding: 2px 5px;
 }
@@ -411,26 +411,25 @@ div.edui-box {
 
 /*不可选中菜单按钮 */
 .edui-loiye-wx .edui-toolbar .edui-combox-body .edui-button-body {
-    font-size: 12px;
-    height: 20px;
-    line-height: 20px;
-    padding-left: 5px;
+    font-size: 22px;
+    height: 38px;
+    line-height: 36px;
     white-space: nowrap;
-    margin: 0 3px 0 0;
+    color:#000000;
+    font-weight: 500;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-combox-body .edui-arrow {
-    background: url(../images/arrow.png) no-repeat;
-    _background: url(../images/arrow.png) no-repeat;
+    background: url(../images/caret-bottom.png) no-repeat;
+    _background: url(../images/caret-bottom.png) no-repeat;
     height: 20px;
     width: 10px;
     margin-top:7px;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-combox .edui-combox-body {
-    border: 1px solid #ffffff;
-    background-color: white;
-    height:20px;
+    background-color: #dedede;
+    height:38px;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-combox-body .edui-splitborder {
@@ -442,7 +441,8 @@ div.edui-box {
 }
 
 .edui-loiye-wx .edui-toolbar .edui-state-hover .edui-combox-body {
-    border: 1px solid #cccccc;
+    background-color: #9f9f9f;
+    cursor:pointer;
 }
 
 .edui-loiye-wx .edui-toolbar .edui-state-hover .edui-combox-body .edui-arrow {
@@ -450,11 +450,15 @@ div.edui-box {
 }
 
 .edui-loiye-wx .edui-toolbar .edui-state-checked .edui-combox-body {
-    border: 1px solid #cccccc;
+    background-color: #9f9f9f;
 }
 
 .edui-toolbar .edui-state-checked .edui-combox-body .edui-arrow {
 
+}
+
+.edui-loiye-wx .edui-toolbar .edui-state-active .edui-combox-body {
+    background-color: #7b7b7b;
 }
 
 .edui-toolbar .edui-state-disabled .edui-combox-body {
@@ -494,9 +498,6 @@ div.edui-box {
 }
 
 .edui-loiye-wx .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
-
-    height:38px;
-    width:38px;
     background-color: #7b7b7b;
 }
 .edui-loiye-wx .edui-toolbar .edui-state-disabled .edui-label {
@@ -1037,18 +1038,10 @@ div.edui-box {
 .edui-loiye-wx .edui-popup-content {
     border:1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    *border-right-width: 2px;
-    *border-bottom-width: 2px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    padding: 5px;
+    padding: 5px 2px;
     background:#ffffff;
 }
 
