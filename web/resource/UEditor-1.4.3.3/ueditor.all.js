@@ -28124,7 +28124,7 @@ UE.ui = baidu.editor.ui = {};
             onbuttonclick:function () {
                 this.showPopup();
             },
-            title:title,
+            title:"代码语言",
             initValue:title,
             className:'edui-for-insertcode',
             indexByValue:function (value) {
@@ -28287,7 +28287,7 @@ UE.ui = baidu.editor.ui = {};
         var ui = new editorui.Combox({
             editor:editor,
             items:items,
-            title:title,
+            title:'标题格式',
             initValue:title,
             className:'edui-for-paragraph',
             onselect:function (t, index) {
