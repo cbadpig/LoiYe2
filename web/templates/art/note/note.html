@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../resource/custom/css/doc.css" >
     <link rel="stylesheet" href="../resource/ionicons-2.0.1/css/ionicons.min.css" >
     <script src="../resource/jquery-3.2.1/jquery-slim.min.js"></script>
+    <script src="../resource/custom/js/LyUtil.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/popper.min.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
 
@@ -118,7 +119,7 @@
                 <div class="row">
                     <div class="col">
                         <!-- 加载编辑器的容器 -->
-                        <script id="container" name="content" type="text/plain">这里写你的初始化内容
+                        <script id="container" name="content" type="text/plain" class="ly-ue">
                         </script>
                         <!-- 配置文件 -->
                         <script type="text/javascript" src="../resource/UEditor-1.4.3.3/ueditor.config.js"></script>
@@ -127,6 +128,17 @@
                         <!-- 实例化编辑器 -->
                         <script type="text/javascript">
                             var ue = UE.getEditor('container');
+//                            LY.fullHeight($('.ly-ue'),114);
+
+                            var height = $(window).height()-114;
+
+
+                            $('.ly-ue').height(10);
+                            $(window).resize(function() {
+                                $('.ly-ue').height(103);
+                            });
+
+
                         </script>
                     </div>
                 </div>
