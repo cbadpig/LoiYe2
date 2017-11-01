@@ -128,17 +128,13 @@
                         <!-- 实例化编辑器 -->
                         <script type="text/javascript">
                             var ue = UE.getEditor('container');
-//                            LY.fullHeight($('.ly-ue'),114);
 
-                            var height = $(window).height()-114;
-
-
-                            $('.ly-ue').height(10);
+                            ue.ready(function() {
+                                ue.setHeight($(window).height()-111);
+                            })
                             $(window).resize(function() {
-                                $('.ly-ue').height(103);
+                                ue.setHeight($(window).height()-111);
                             });
-
-
                         </script>
                     </div>
                 </div>
