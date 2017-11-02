@@ -74,7 +74,10 @@
                         <p class="text-truncate ly-nav2-item-p">无标题文章无标题文章无标题文sdfasdfasdfdafsdfasdfasdfdafsdfasdfasdfdafsdfasdfasdf</p>
                     </div>
                     <span class="ly-nav2-item-s">字数:12</span>
-                    <i class="icon ion-ios-gear position-absolute ly-nav2-i"></i>
+                    <a  class="position-absolute ly-nav2-i" data-toggle="popover" data-content="123" data-trigger="focus">
+                        <i class="icon ion-ios-gear"></i>
+                    </a>
+
                 </li>
                 <li class="nav-item ly-nav2-item position-relative">
                     <i class="icon ion-android-document position-absolute ly-nav2-il"></i>
@@ -83,7 +86,9 @@
                         <p class="text-truncate ly-nav2-item-p">无标题文章无标题文章无标题文sdfasdfasdfdafsdfasdfasdfdafsdfasdfasdfdafsdfasdfasdf</p>
                     </div>
                     <span class="ly-nav2-item-s">字数:12</span>
-                    <i class="icon ion-ios-gear position-absolute ly-nav2-i"></i>
+                    <a  class="position-absolute ly-nav2-i" data-toggle="popover" data-content="3123" >
+                        <i class="icon ion-ios-gear"></i>
+                    </a>
                 </li>
                 <li class="nav-item ly-nav2-item position-relative">
                     <i class="icon ion-android-document position-absolute ly-nav2-il"></i>
@@ -135,6 +140,9 @@
                             $(window).resize(function() {
                                 ue.setHeight($(window).height()-111);
                             });
+                            $(function () {
+                                $('[data-toggle="popover"]').popover();
+                            })
                         </script>
                     </div>
                 </div>

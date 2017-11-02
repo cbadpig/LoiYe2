@@ -109,8 +109,9 @@
 
 }
 .ly-nav2-i {
-    right: 1rem;
+    right: 0.8rem;
     top: 2.2rem;
+    font-size:18px;
     color:#9d9d9d;
 }
 .ly-text {
