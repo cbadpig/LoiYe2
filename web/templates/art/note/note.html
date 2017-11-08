@@ -11,6 +11,7 @@
     <script src="../resource/custom/js/LyUtil.js"></script>
     <script src="../resource/wenui-popover-1.2.1/jquery.webui-popover.js"></script>
     <script src="../resource/sortable/Sortable.js"></script>
+    <script src="../resource/bootstrap-4.0.0-beta.2/js/popper.min.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
 
 </head>
@@ -21,7 +22,12 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 col-xl-2 ly-sidebar ly-sidebar-color">
-            <button type="button" class="btn btn-primary btn-lg btn-block">返回首页</button>
+            <div class="container ly-container">
+                <button type="button" class="btn btn-outline-info btn-lg btn-block">
+                    返回首页
+                    <i class="icon ion-arrow-return-left"></i>
+                </button>
+            </div>
             <div class="ly-create-wj" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <i class="icon ion-plus-round"></i>
                 <span>新建文集</span>
@@ -31,10 +37,10 @@
                 <div class="card card-body ly-create-wj-form">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="text" class="form-control form-control-sm ly-form-control " placeholder="请输入你的文集名..." autofocus="autofocus"  autocomplete="off">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">取消</button>
+                        <button type="submit" class="btn btn-outline-info btn-sm btn-right">创建你的文集</button>
+                        <button type="submit" class="btn btn-outline-info  btn-sm">取消</button>
                     </form>
                 </div>
             </div>
@@ -157,14 +163,14 @@
 </div>
 <script>
     //Sortable.create(sort, { /* options */ });
-    $('#i1').webuiPopover({
-        width:80,
-        height:100,
-        padding:false,
-        animation:'pop',
-        content:$('#open').html(),
-    });
-    content:$('#open').remove();
+//    $('#i1').webuiPopover({
+//        width:80,
+//        height:100,
+//        padding:false,
+//        animation:'pop',
+//        content:$('#open').html(),
+//    });
+//    content:$('#open').remove();
 </script>
 </body>
 </html>
