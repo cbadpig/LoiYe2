@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="../resource/bootstrap-4.0.0-beta.2/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../resource/custom/css/doc.css" >
     <link rel="stylesheet" href="../resource/ionicons-2.0.1/css/ionicons.min.css" >
+    <link rel="stylesheet" href="../resource/wenui-popover-1.2.1/jquery.webui-popover.css" >
     <script src="../resource/jquery-3.2.1/jquery-slim.min.js"></script>
     <script src="../resource/custom/js/LyUtil.js"></script>
-    <script src="../resource/bootstrap-4.0.0-beta.2/js/popper.min.js"></script>
+    <script src="../resource/wenui-popover-1.2.1/jquery.webui-popover.js"></script>
+    <script src="../resource/sortable/Sortable.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
+<div id="open" hidden>
+    2353
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 col-xl-2 ly-sidebar ly-sidebar-color">
@@ -52,7 +57,7 @@
                     <a class="nav-link text-truncate"  href="#">
                         123456789012345678901234567890
                     </a>
-                    <i class="icon ion-ios-gear position-absolute ly-nav-i"></i>
+                    <i class="icon ion-ios-gear position-absolute ly-nav-i" id="i1"></i>
                 </li>
             </nav>
 
@@ -66,7 +71,7 @@
                 <i class="icon ion-android-add-circle"></i>
                 <span>新建文章</span>
             </button>
-            <nav class="nav flex-column">
+            <nav class="nav flex-column" id="sort">
                 <li class="nav-item ly-nav2-item ly-nav2-active position-relative">
                     <i class="icon ion-android-document position-absolute ly-nav2-il"></i>
                     <div class="nav-link ly-nav2-item-link">
@@ -150,5 +155,16 @@
         </main>
     </div>
 </div>
+<script>
+    //Sortable.create(sort, { /* options */ });
+    $('#i1').webuiPopover({
+        width:350,
+        height:40,
+        padding:false,
+        animation:'pop',
+        content:$('#open').html(),
+    });
+    content:$('#open').remove();
+</script>
 </body>
 </html>
