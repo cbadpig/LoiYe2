@@ -16,18 +16,24 @@
     <result column="fbsj" property="fbsj" jdbcType="VARCHAR" />
     <result column="wzxh" property="wzxh" jdbcType="INTEGER" />
     <result column="yh_id" property="yhId" jdbcType="INTEGER" />
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.loiye.core.bean.HsWzWj" extends="BaseResultMap" >
     <result column="nr" property="nr" jdbcType="LONGVARCHAR" />
   </resultMap>
+
   <sql id="Base_Column_List" >
-    id, wj_id, bt, ms, fm, wzzt, wzzs, ydsl, plsl, xhsl, zssl, fbsj, wzxh, yh_id
+    id, wj_id, bt, ms, fm, wzzt, wzzs, ydsl, plsl, xhsl, zssl, fbsj, wzxh, yh_id, nr
   </sql>
-  <sql id="Blob_Column_List" >
-    nr
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
-    select 
+
+  <select id="selectByYh" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    SELECT <include refid="Base_Column_List" />
+    FROM t_hs_wzwj
+    WHERE yh_id = #{yhId,jdbcType=INTEGER}
+    ORDER BY wzxh ASC;
+  </select>
+
+
+
+  <!--<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -39,14 +45,14 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.loiye.core.bean.HsWzWj" >
-    insert into t_hs_wzwj (id, wj_id, bt, 
-      ms, fm, wzzt, wzzs, 
-      ydsl, plsl, xhsl, zssl, 
+    insert into t_hs_wzwj (id, wj_id, bt,
+      ms, fm, wzzt, wzzs,
+      ydsl, plsl, xhsl, zssl,
       fbsj, wzxh, yh_id, nr
       )
-    values (#{id,jdbcType=INTEGER}, #{wjId,jdbcType=INTEGER}, #{bt,jdbcType=VARCHAR}, 
-      #{ms,jdbcType=VARCHAR}, #{fm,jdbcType=VARCHAR}, #{wzzt,jdbcType=INTEGER}, #{wzzs,jdbcType=INTEGER}, 
-      #{ydsl,jdbcType=INTEGER}, #{plsl,jdbcType=INTEGER}, #{xhsl,jdbcType=INTEGER}, #{zssl,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{wjId,jdbcType=INTEGER}, #{bt,jdbcType=VARCHAR},
+      #{ms,jdbcType=VARCHAR}, #{fm,jdbcType=VARCHAR}, #{wzzt,jdbcType=INTEGER}, #{wzzs,jdbcType=INTEGER},
+      #{ydsl,jdbcType=INTEGER}, #{plsl,jdbcType=INTEGER}, #{xhsl,jdbcType=INTEGER}, #{zssl,jdbcType=INTEGER},
       #{fbsj,jdbcType=VARCHAR}, #{wzxh,jdbcType=INTEGER}, #{yhId,jdbcType=INTEGER}, #{nr,jdbcType=LONGVARCHAR}
       )
   </insert>
@@ -229,5 +235,5 @@
       wzxh = #{wzxh,jdbcType=INTEGER},
       yh_id = #{yhId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
-  </update>
+  </update>-->
 </mapper>
