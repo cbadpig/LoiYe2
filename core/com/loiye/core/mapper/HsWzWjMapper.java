@@ -1,7 +1,7 @@
 package com.loiye.core.mapper;
 
 import com.loiye.core.bean.HsWzWj;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,6 +13,13 @@ public interface HsWzWjMapper {
      * @return
      */
     List<HsWzWj> selectByYh(Integer yhId);
+
+    /**
+     * 查询出最大的Wzxh
+     * @param yhId
+     * @return
+     */
+    int selectMaxWzxh(@Param("yhId") Integer yhId, @Param("wjId") Integer wjId);
 
 
 //    int deleteByPrimaryKey(Integer id);

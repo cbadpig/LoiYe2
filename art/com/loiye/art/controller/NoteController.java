@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/huaishu/ajax")
+@RequestMapping("/huaishu/ajax/note")
 public class NoteController {
 
     @Autowired
     private NoteService noteService;
 
-    @GetMapping("/WJWZ")
-    public String getWJWZ() {
-        return noteService.getWJWZ();
+    @GetMapping("/wzwj/")
+    public String getWzwj() {
+        return noteService.getWzwj();
     }
 
 }

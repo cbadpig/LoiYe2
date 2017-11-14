@@ -6,6 +6,7 @@ import com.loiye.core.mapper.HsWzWjMapper;
 import com.loiye.core.util.LyConstant;
 import com.loiye.core.util.LyEmpty;
 import com.loiye.core.util.LyJson;
+import com.loiye.core.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class NoteServiceImpl implements NoteService {
     private HsWzWjMapper hsWzWjMapper;
 
     @Override
-    public String getWJWZ() {
+    public String getWzwj() {
 
         List<HsWzWj> hsWzWjList = hsWzWjMapper.selectByYh(LyConstant.YH_ID);
         Map<Object,Object> map = new HashMap<Object,Object>();
@@ -35,7 +36,21 @@ public class NoteServiceImpl implements NoteService {
         return LyJson.toString(map);
     }
 
-    public static void putMap(Map<Object,Object> map,List<HsWzWj> hsWzWjList) {
+    @Override
+    public Result insertWjTitle() {
+        HsWzWj hsWzWj = new HsWzWj();
+        hsWzWj.setBt("test1");
+        hsWzWj.setWzxh(selectMaxWzxhAdd(1,0));
+        hsWzWj.setYhId(1);
+        return Result.OK();
+    }
+
+    @Override
+    public Result insertWzTile() {
+        return null;
+    }
+
+    private void putMap(Map<Object,Object> map,List<HsWzWj> hsWzWjList) {
 
         List<HsWzWj> wjList = new ArrayList<HsWzWj>();
 
@@ -62,6 +77,9 @@ public class NoteServiceImpl implements NoteService {
         }
     }
 
-
+    private int selectMaxWzxhAdd(int yhId,int wjId) {
+        int max = hsWzWjMapper.selectMaxWzxh(yhId,wjId);
+        return ++max;
+    }
 
 }
