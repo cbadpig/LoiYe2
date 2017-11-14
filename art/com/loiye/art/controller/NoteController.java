@@ -1,6 +1,8 @@
 package com.loiye.art.controller;
 
+import com.loiye.art.service.NoteService;
 import com.loiye.core.util.Result;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/huaishu/ajax")
 public class NoteController {
 
+    @Autowired
+    private NoteService noteService;
+
     @GetMapping("/WJWZ")
     public String getWJWZ() {
-        return "";
+        return noteService.getWJWZ();
     }
 
 }
