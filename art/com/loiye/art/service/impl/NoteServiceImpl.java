@@ -3,10 +3,9 @@ package com.loiye.art.service.impl;
 import com.loiye.art.service.NoteService;
 import com.loiye.core.bean.HsWzWj;
 import com.loiye.core.mapper.HsWzWjMapper;
-import com.loiye.core.util.LyConstant;
-import com.loiye.core.util.LyEmpty;
-import com.loiye.core.util.LyJson;
-import com.loiye.core.util.Result;
+import com.loiye.core.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,12 +17,19 @@ import java.util.Map;
 @Service
 public class NoteServiceImpl implements NoteService {
 
+    private static final Logger logger = LogManager.getLogger(NoteServiceImpl.class);
+
     @Autowired
     private HsWzWjMapper hsWzWjMapper;
 
     @Override
     public String getWzwj() {
-
+        logger.trace("trace level");
+        logger.debug("debug level");
+        logger.info("info level");
+        logger.warn("warn level");
+        logger.error("error level");
+        logger.fatal("fatal level");
         List<HsWzWj> hsWzWjList = hsWzWjMapper.selectByYh(LyConstant.YH_ID);
         Map<Object,Object> map = new HashMap<Object,Object>();
 
