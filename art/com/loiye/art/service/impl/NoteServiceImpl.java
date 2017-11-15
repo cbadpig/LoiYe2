@@ -43,11 +43,14 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public Result insertWjTitle() {
+    public Result insertWjTitle(String bt) {
         HsWzWj hsWzWj = new HsWzWj();
-        hsWzWj.setBt("test1");
+        hsWzWj.setWjId(0);
+        hsWzWj.setWzzt(0);
+        hsWzWj.setBt(bt);
         hsWzWj.setWzxh(selectMaxWzxhAdd(1,0));
         hsWzWj.setYhId(1);
+        hsWzWjMapper.insertSelective(hsWzWj);
         return Result.OK();
     }
 

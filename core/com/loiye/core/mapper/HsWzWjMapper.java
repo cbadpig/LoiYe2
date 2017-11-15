@@ -21,10 +21,11 @@ public interface HsWzWjMapper {
      */
     int selectMaxWzxh(@Param("yhId") Integer yhId, @Param("wjId") Integer wjId);
 
+    int insertSelective(HsWzWj hsWzWj);
 
 //    int deleteByPrimaryKey(Integer id);
 //
-//    int insert(HsWzWj record);
+//    int insert(HsWzWj record);DS
 //
 //    int insertSelective(HsWzWj record);
 //

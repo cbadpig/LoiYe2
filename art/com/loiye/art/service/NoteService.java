@@ -6,7 +6,7 @@ public interface NoteService {
 
     String getWzwj();
 
-    Result insertWjTitle();
+    Result insertWjTitle(String bt);
 
     Result insertWzTile();
 

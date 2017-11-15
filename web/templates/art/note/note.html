@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../resource/custom/css/doc.css" >
     <link rel="stylesheet" href="../resource/ionicons-2.0.1/css/ionicons.min.css" >
     <link rel="stylesheet" href="../resource/wenui-popover-1.2.1/jquery.webui-popover.css" >
-    <script src="../resource/jquery-3.2.1/jquery-slim.min.js"></script>
+    <script src="../resource/jquery-3.2.1/jquery-3.2.1.min.js"></script>
     <script src="../resource/custom/js/LyUtil.js"></script>
     <script src="../resource/wenui-popover-1.2.1/jquery.webui-popover.js"></script>
     <script src="../resource/sortable/Sortable.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/popper.min.js"></script>
     <script src="../resource/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="../resource/custom/js/art/note.js"></script>
 
 </head>
 <body>
@@ -37,10 +38,10 @@
                 <div class="card card-body ly-create-wj-form">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-sm ly-form-control " placeholder="请输入你的文集名..." autofocus="autofocus"  autocomplete="off">
+                            <input id="wjName" type="text" class="form-control form-control-sm ly-form-control " placeholder="请输入你的文集名..." autofocus="autofocus"  autocomplete="off">
                         </div>
-                        <button type="submit" class="btn btn-outline-info btn-sm btn-right">创建你的文集</button>
-                        <button type="submit" class="btn btn-outline-info btn-sm" data-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">取消</button>
+                        <button type="button" onclick="wjSubmit()" class="btn btn-outline-info btn-sm btn-right">创建你的文集</button>
+                        <a class="btn btn-outline-info btn-sm" data-toggle="collapse" href="#collapseExample" aria-controls="collapseExample">取消</a>
                     </form>
                 </div>
             </div>

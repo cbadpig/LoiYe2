@@ -36,7 +36,103 @@
     WHERE yh_id = #{yhId,jdbcType=INTEGER} AND wj_id = #{wjId,jdbcType=INTEGER}
   </select>
 
-
+  <insert id="insertSelective" parameterType="com.loiye.core.bean.HsWzWj" >
+    insert into t_hs_wzwj
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="wjId != null" >
+        wj_id,
+      </if>
+      <if test="bt != null" >
+        bt,
+      </if>
+      <if test="ms != null" >
+        ms,
+      </if>
+      <if test="fm != null" >
+        fm,
+      </if>
+      <if test="wzzt != null" >
+        wzzt,
+      </if>
+      <if test="wzzs != null" >
+        wzzs,
+      </if>
+      <if test="ydsl != null" >
+        ydsl,
+      </if>
+      <if test="plsl != null" >
+        plsl,
+      </if>
+      <if test="xhsl != null" >
+        xhsl,
+      </if>
+      <if test="zssl != null" >
+        zssl,
+      </if>
+      <if test="fbsj != null" >
+        fbsj,
+      </if>
+      <if test="wzxh != null" >
+        wzxh,
+      </if>
+      <if test="yhId != null" >
+        yh_id,
+      </if>
+      <if test="nr != null" >
+        nr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="wjId != null" >
+        #{wjId,jdbcType=INTEGER},
+      </if>
+      <if test="bt != null" >
+        #{bt,jdbcType=VARCHAR},
+      </if>
+      <if test="ms != null" >
+        #{ms,jdbcType=VARCHAR},
+      </if>
+      <if test="fm != null" >
+        #{fm,jdbcType=VARCHAR},
+      </if>
+      <if test="wzzt != null" >
+        #{wzzt,jdbcType=INTEGER},
+      </if>
+      <if test="wzzs != null" >
+        #{wzzs,jdbcType=INTEGER},
+      </if>
+      <if test="ydsl != null" >
+        #{ydsl,jdbcType=INTEGER},
+      </if>
+      <if test="plsl != null" >
+        #{plsl,jdbcType=INTEGER},
+      </if>
+      <if test="xhsl != null" >
+        #{xhsl,jdbcType=INTEGER},
+      </if>
+      <if test="zssl != null" >
+        #{zssl,jdbcType=INTEGER},
+      </if>
+      <if test="fbsj != null" >
+        #{fbsj,jdbcType=VARCHAR},
+      </if>
+      <if test="wzxh != null" >
+        #{wzxh,jdbcType=INTEGER},
+      </if>
+      <if test="yhId != null" >
+        #{yhId,jdbcType=INTEGER},
+      </if>
+      <if test="nr != null" >
+        #{nr,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
   <!--<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
