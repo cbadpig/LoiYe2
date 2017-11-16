@@ -24,12 +24,6 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     public String getWzwj() {
-        logger.trace("trace level");
-        logger.debug("debug level");
-        logger.info("info level");
-        logger.warn("warn level");
-        logger.error("error level");
-        logger.fatal("fatal level");
         List<HsWzWj> hsWzWjList = hsWzWjMapper.selectByYh(LyConstant.YH_ID);
         Map<Object,Object> map = new HashMap<Object,Object>();
 

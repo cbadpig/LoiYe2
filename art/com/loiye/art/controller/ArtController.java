@@ -14,7 +14,7 @@ public class ArtController {
         return  new ModelAndView("templates/art/index.html");
     }
 
-    @GetMapping("/note")
+    @GetMapping("/note/")
     public ModelAndView accessArtHuaiShu() {
         return  new ModelAndView("templates/art/note/note.html");
     }

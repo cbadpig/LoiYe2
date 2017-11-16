@@ -2,21 +2,30 @@
 
     if (!window.ly) {
         window['ly'] = {
+            PROJECT_HUAISHU:"huaishu",
+            NOTE_WJ:"wj",
             CACHE_BASE:'basepath',
             CACHE_BASE_HUAISHU:'huaishu',
             CACHE_BASE_BAIYANG:'baiyang'
         }
     };
 
+    if (!ly.yh) ly.yh = {
+
+    }
+
+    if (!ly.note) ly.note = {
+        wjTitle:function(type) {
+            var data = ly.storage.getSession(type);
+            data.
+        },
+        init:function(type,data) {
+            ly.storage.setSession(type,data);
+        }
+    }
 
     if (!ly.url) ly.url = {
-        base:function(type) {
-           var basePath = ly.storage.getSession(ly.CACHE_BASE);
-           if (type) {
-               return basePath + '/' + ly.CACHE_BASE_HUAISHU + '/';
-           }
-            return basePath;
-        }
+
     };
 
     /**

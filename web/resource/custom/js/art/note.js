@@ -1,5 +1,19 @@
-
-
+$(function () {
+    ly.url.userId();
+});
+function init() {
+    $.ajax({
+        url:'ajax/note/wzwj/',
+        type:'POST',
+        dataType:'json',
+        success:function (data) {
+            alert("创建成功");
+        },
+        error:function () {
+            alert("创建失败");
+        }
+    });
+}
 function wjSubmit() {
     var wjName = $("#wjName").val();
 
@@ -11,10 +25,10 @@ function wjSubmit() {
             bt:wjName
         },
         success:function (data) {
-            alert(1213);
+            alert("创建成功");
         },
         error:function () {
-            alert(32341);
+            alert("创建失败");
         }
     });
     
