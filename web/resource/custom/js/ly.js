@@ -14,10 +14,13 @@
 
     }
 
+    /**
+     * 【公用】文章缓存
+     */
     if (!ly.note) ly.note = {
-        wjTitle:function(type) {
+        createTitle:function(type) {
             var data = ly.storage.getSession(type);
-            data.
+            console.log(data);
         },
         init:function(type,data) {
             ly.storage.setSession(type,data);
@@ -29,7 +32,7 @@
     };
 
     /**
-     * HTML5缓存封装
+     * 【公用】HTML5缓存封装
      */
     if (!ly.storage) ly.storage = {
         getSession: function(a) {
