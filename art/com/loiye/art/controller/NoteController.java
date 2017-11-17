@@ -15,8 +15,8 @@ public class NoteController {
     @Autowired
     private NoteService noteService;
 
-    @GetMapping("/wzwj/")
-    public String getWzwj() {
+    @GetMapping("/wzwj")
+    public Result getWzwj() {
         return noteService.getWzwj();
     }
 

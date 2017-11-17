@@ -5,10 +5,21 @@
             PROJECT_HUAISHU:"huaishu",
             NOTE_WJ:"wj",
             CACHE_BASE:'basepath',
-            CACHE_BASE_HUAISHU:'huaishu',
+            CACHE_BASE_HUAISHU_NOTE:'huaishu_note',
             CACHE_BASE_BAIYANG:'baiyang'
         }
     };
+
+    if (!ly.huaishu) ly.huaishu = {
+        createTitle:function() {
+            ly.note.createTitle(ly.CACHE_BASE_HUAISHU_NOTE);
+        },
+        init:function (data) {
+            ly.note.init(ly.CACHE_BASE_HUAISHU_NOTE,data);
+            // this.createTitle();
+        }
+    }
+
 
     if (!ly.yh) ly.yh = {
 
@@ -20,10 +31,13 @@
     if (!ly.note) ly.note = {
         createTitle:function(type) {
             var data = ly.storage.getSession(type);
-            console.log(data);
+            var dataObj = JSON.parse(data);
+
+            console.log(dataObj);
         },
         init:function(type,data) {
             ly.storage.setSession(type,data);
+            this.createTitle(type);
         }
     }
 

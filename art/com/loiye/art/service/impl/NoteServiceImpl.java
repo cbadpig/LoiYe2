@@ -23,7 +23,7 @@ public class NoteServiceImpl implements NoteService {
     private HsWzWjMapper hsWzWjMapper;
 
     @Override
-    public String getWzwj() {
+    public Result getWzwj() {
         List<HsWzWj> hsWzWjList = hsWzWjMapper.selectByYh(LyConstant.YH_ID);
         Map<Object,Object> map = new HashMap<Object,Object>();
 
@@ -33,7 +33,7 @@ public class NoteServiceImpl implements NoteService {
             putMap(map,hsWzWjList);
         }
 
-        return LyJson.toString(map);
+        return Result.OK(LyJson.toString(map));
     }
 
     @Override

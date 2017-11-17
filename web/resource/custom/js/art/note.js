@@ -1,12 +1,13 @@
 $(function () {
-    ly.url.userId();
+    init();
 });
 function init() {
     $.ajax({
-        url:'ajax/note/wzwj/',
-        type:'POST',
+        url:'ajax/note/wzwj',
+        type:'get',
         dataType:'json',
         success:function (data) {
+            ly.huaishu.init(data);
             alert("创建成功");
         },
         error:function () {
