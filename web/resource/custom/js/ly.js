@@ -7,6 +7,7 @@
             CACHE_BASE:'basepath',
             CACHE_BASE_HUAISHU_NOTE:'huaishu_note',
             CACHE_BASE_BAIYANG:'baiyang'
+
         }
     };
 
@@ -16,7 +17,6 @@
         },
         init:function (data) {
             ly.note.init(ly.CACHE_BASE_HUAISHU_NOTE,data);
-            // this.createTitle();
         }
     }
 
@@ -29,15 +29,38 @@
      * 【公用】文章缓存
      */
     if (!ly.note) ly.note = {
-        createTitle:function(type) {
+        createWjTitle:function(type) {
             var data = ly.storage.getSession(type);
-            var dataObj = JSON.parse(data);
-
-            console.log(dataObj);
+            var note_wj = JSON.parse(data).wj;
+            if (note_wj.length == 0) {
+                alert("无文集");
+                return;
+            }
+            for (var i=0 ; i<note_wj.length ; i++) {
+                if (i == 0) {
+                    $("#wjTitle").append('<li class="ly-nav-active nav-item ly-nav-item position-relative">' +
+                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick="ly.note.openWz('+ ly.CACHE_BASE_HUAISHU_NOTE +','+ note_wj[i].id +')">'+ note_wj[i].bt +'</a>' +
+                        '<i class="icon ion-ios-gear position-absolute ly-nav-i">' +
+                        '</i></li>').fadeIn("slow");
+                } else {
+                    $("#wjTitle").append('<li class="ly-nav-nav-item ly-nav-item position-relative">' +
+                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick="ly.note.openWz('+ ly.CACHE_BASE_HUAISHU_NOTE +','+ note_wj[i].id +')">'+ note_wj[i].bt +'</a>' +
+                        '<i class="icon ion-ios-gear position-absolute ly-nav-i" hidden>' +
+                        '</i></li>').fadeIn("slow");
+                }
+            }
+        },
+        createWzTitle:function(type,wjId) {
+            var data = ly.storage.getSession(type);
+            var note = JSON.parse(data);
+            console.log(note['1']);
+        },
+        openWz:function(type,wjId) {
+            alert(wjId);
         },
         init:function(type,data) {
             ly.storage.setSession(type,data);
-            this.createTitle(type);
+            this.createWjTitle(type);
         }
     }
 

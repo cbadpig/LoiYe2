@@ -32,7 +32,6 @@ public class NoteServiceImpl implements NoteService {
         } else {
             putMap(map,hsWzWjList);
         }
-
         return Result.OK(LyJson.toString(map));
     }
 

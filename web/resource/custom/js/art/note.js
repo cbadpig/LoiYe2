@@ -7,8 +7,11 @@ function init() {
         type:'get',
         dataType:'json',
         success:function (data) {
-            ly.huaishu.init(data);
-            alert("创建成功");
+            if (data.flag) {
+                ly.huaishu.init(data.message);
+            } else {
+                alert("创建失败");
+            }
         },
         error:function () {
             alert("创建失败");
