@@ -32,19 +32,19 @@
         createWjTitle:function(type) {
             var data = ly.storage.getSession(type);
             var note_wj = JSON.parse(data).wj;
-            if (note_wj.length == 0) {
-                alert("无文集");
+            if (!note_wj) {
+
                 return;
             }
             for (var i=0 ; i<note_wj.length ; i++) {
                 if (i == 0) {
                     $("#wjTitle").append('<li class="ly-nav-active nav-item ly-nav-item position-relative">' +
-                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick="ly.note.openWz('+ ly.CACHE_BASE_HUAISHU_NOTE +','+ note_wj[i].id +')">'+ note_wj[i].bt +'</a>' +
+                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick=\'ly.note.openWz("'+ ly.CACHE_BASE_HUAISHU_NOTE +'","'+ note_wj[i].id +'")\'>'+ note_wj[i].bt +'</a>' +
                         '<i class="icon ion-ios-gear position-absolute ly-nav-i">' +
                         '</i></li>').fadeIn("slow");
                 } else {
                     $("#wjTitle").append('<li class="ly-nav-nav-item ly-nav-item position-relative">' +
-                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick="ly.note.openWz('+ ly.CACHE_BASE_HUAISHU_NOTE +','+ note_wj[i].id +')">'+ note_wj[i].bt +'</a>' +
+                        '<a class="nav-link text-truncate"  href="javascript:void(0)" onclick=\'ly.note.openWz("'+ ly.CACHE_BASE_HUAISHU_NOTE +'","'+ note_wj[i].id +'")\'>'+ note_wj[i].bt +'</a>' +
                         '<i class="icon ion-ios-gear position-absolute ly-nav-i" hidden>' +
                         '</i></li>').fadeIn("slow");
                 }
@@ -53,10 +53,28 @@
         createWzTitle:function(type,wjId) {
             var data = ly.storage.getSession(type);
             var note = JSON.parse(data);
-            console.log(note['1']);
+            if (!note) {
+                return;
+            }
+            for (var i=0 ; i<note.length ; i++) {
+                var note_wz = note[i];
+                console.log(note_wz);
+                if (note_wz.wjId == wjId) {
+                    $("#wjTitle").append('<li class="nav-item ly-nav2-item position-relative">' +
+                        '<i class="icon ion-android-document position-absolute ly-nav2-il"></i>' +
+                        '<div class="nav-link ly-nav2-item-link">' +
+                        '<p class="text-truncate ly-nav2-item-t">"'+ note_wz.bt +'"</p>' +
+                        '<p class="text-truncate ly-nav2-item-p">"'+ note_wz.bt +'"</p>' +
+                        '</div>' +
+                        '<span class="ly-nav2-item-s">"'+ note_wz.wzzs +'"</span>' +
+                        '<i class="icon ion-ios-gear position-absolute ly-nav2-i"></i>' +
+                        '</li>');
+                }
+            }
+
         },
         openWz:function(type,wjId) {
-            alert(wjId);
+            this.createWzTitle(type,wjId);
         },
         init:function(type,data) {
             ly.storage.setSession(type,data);
